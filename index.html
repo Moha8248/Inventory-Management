@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Stock Management System</h1>
+
+    <h2>Navigation</h2>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sellStock.php">Sell Stock</a></li>
+    <li><a href="salesReport.php">Sales Report</a></li>
+</ul>
+
+    <!-- Add Product Form -->
+    <h2>Add Product</h2>
+    <form action="addProduct.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Product Name" required />
+        <input type="number" step="0.01" name="price" placeholder="Price" required />
+        <input type="number" name="quantity" placeholder="Quantity" required />
+        <input type="file" name="image" required />
+        <button type="submit">Add Product</button>
+    </form>
+
+    <!-- Search Bar -->
+    <h2>Search Products</h2>
+    <input type="text" id="search-bar" placeholder="Search for products...">
+
+    <!-- Product List -->
+    <h2>Product List</h2>
+    <div id="product-list">
+        <!-- Product list will be dynamically loaded here using JavaScript -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
